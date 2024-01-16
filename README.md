@@ -6,12 +6,6 @@
     composer update
     ```
 
--   install npm
-
-    ```sh
-    npm install && npm run dev
-    ```
-
 -   buat file .env dengan cara copy file .env.example
 
 -   buat secret key laravel dengan menjalankan
@@ -27,4 +21,9 @@
 -   menjalankan program
     ```sh
     php artisan serve
+    ```
+-   install npm
+
+    ```sh
+    npm install && npm run dev
     ```
