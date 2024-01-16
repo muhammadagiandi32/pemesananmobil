@@ -22,7 +22,7 @@
     ```sh
     php artisan serve
     ```
--   install npm
+-   install npm dan jalankan forontend vite.js
 
     ```sh
     npm install && npm run dev
