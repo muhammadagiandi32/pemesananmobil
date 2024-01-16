@@ -23,26 +23,19 @@
             </div>
         </div>
         <div class="row">
+            @foreach($car as $cars)
             <div class="col-sm-6">
                 <div class="card">
-                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <img class="card-img-top" src="{{ $cars->gambar }}" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">{{ $cars->model }}</h5>
+                        <p class="card-text">{{ $cars->merek }}</p>
+                        <p class="card-text">Rp.{{ number_format($cars->harga,2) }}/hari</p>
+                        <a href="{{ route('pesan', encrypt($cars->id)) }}" class="btn btn-primary">Pesan Sekarang</a>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
-                <div class="card">
-                    <img class="card-img-top" src="..." alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>

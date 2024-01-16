@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cars;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $cars=Cars::get();
+        return view('home',['car'=>$cars]);
+    }
+    public function pesan($id)
+    {
+        
+        $cars=Cars::find(decrypt($id));
+        // return view('home',['car'=>$cars]);
+        dd($cars);
+
     }
 }
