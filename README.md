@@ -1,4 +1,4 @@
-## Run
+## Dokumentasi
 
 -   update / install composer
 
@@ -6,7 +6,7 @@
     composer update
     ```
 
-    install npm
+-   install npm
 
     ```sh
     npm install && npm run dev
