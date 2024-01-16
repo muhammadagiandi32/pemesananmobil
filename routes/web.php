@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
 
 Auth::routes();
@@ -23,3 +23,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/cars', CarsController::class);
 Route::get('/pesan/{id}', [App\Http\Controllers\HomeController::class, 'pesan'])->name('pesan');
+Route::get('/pesanan/list', [App\Http\Controllers\HomeController::class, 'list'])->name('pesanan.list');
+
+Route::get('/pesanan/kembalikan/{id}', [App\Http\Controllers\HomeController::class, 'kembalikan'])->name('kembalikan');

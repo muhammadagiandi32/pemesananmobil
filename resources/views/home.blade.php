@@ -23,6 +23,16 @@
             </div>
         </div>
         <div class="row">
+            @if (session('msg'))
+            <div class="alert alert-success" role="alert">
+                {{ session('msg') }}
+            </div>
+            @endif
+             @if (session('errors'))
+            <div class="alert alert-dangers" role="alert">
+                {{ session('errors') }}
+            </div>
+            @endif
             @foreach($car as $cars)
             <div class="col-sm-6">
                 <div class="card">

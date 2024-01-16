@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('nopol');
             $table->decimal('harga', $total=8,$places=2);
             $table->string('gambar');
+            $table->integer('active')->default(1);
             $table->timestamps();
         });
     }

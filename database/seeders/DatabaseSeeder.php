@@ -36,7 +36,7 @@ class DatabaseSeeder extends Seeder
             \App\Models\Cars::create([
                     'model' => $faker->vehicleModel,
                     'merek' => $faker->vehicle,
-                    'nopol' => $faker->vehicleRegistration('[A-Z]{1} [0-9]{5} [A-Z]{3}'),
+                    'nopol' => $faker->vehicleRegistration('[B]{1} [0-9]{5} [A-Z]{3}'),
                     'gambar'=> fake()->imageUrl(),
                     'harga' => $faker->vehicleRegistration('[1-9]{5}'),
             ]);

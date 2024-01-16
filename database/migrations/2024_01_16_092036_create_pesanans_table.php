@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('nopol');
             $table->string('user_id');
             $table->date('order_date');
-            $table->date('retur_date');
-            $table->decimal('total_amount', $total=8,$places=2);
+            $table->date('retur_date')->nullable();
+            $table->decimal('total_amount', $total=8,$places=2)->nullable();
             $table->timestamps();
         });
     }
