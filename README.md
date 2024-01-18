@@ -27,3 +27,22 @@
     ```sh
     npm install && npm run dev
     ```
+
+-   Login Admin
+    email
+    ```sh
+    admin@gmail.com
+    ```
+    Password
+    ```sh
+    password
+    ```
+-   Login Admin
+    email
+    ```sh
+    user@gmail.com
+    ```
+    Password
+    ```sh
+    password
+    ```
